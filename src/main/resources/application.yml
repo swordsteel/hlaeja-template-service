@@ -4,6 +4,19 @@ spring:
   profiles:
     active: development
 
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: "health,info"
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    info:
+      enabled: true
+
 ---
 ###############################
 ### Development environment ###
