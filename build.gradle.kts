@@ -6,7 +6,6 @@ plugins {
 }
 
 group = "ltd.hlaeja"
-version = "0.0.1-SNAPSHOT"
 
 java {
     toolchain {
