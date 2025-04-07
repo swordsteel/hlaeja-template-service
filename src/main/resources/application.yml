@@ -1,3 +1,32 @@
 spring:
   application:
     name: hlaeja-service
+  profiles:
+    active: development
+
+---
+###############################
+### Development environment ###
+###############################
+spring:
+  config:
+    activate:
+      on-profile: development
+
+---
+##########################
+### Docker environment ###
+##########################
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+---
+##############################
+### Production environment ###
+##############################
+spring:
+  config:
+    activate:
+      on-profile: production
