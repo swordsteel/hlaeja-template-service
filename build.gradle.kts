@@ -1,8 +1,24 @@
 plugins {
-    kotlin("jvm") version "1.9.25"
-    kotlin("plugin.spring") version "1.9.25"
-    id("org.springframework.boot") version "3.4.4"
-    id("io.spring.dependency-management") version "1.1.7"
+    alias(hlaeja.plugins.kotlin.jvm)
+    alias(hlaeja.plugins.kotlin.spring)
+    alias(hlaeja.plugins.spring.dependency.management)
+    alias(hlaeja.plugins.springframework.boot)
+}
+
+dependencies {
+    implementation(hlaeja.fasterxml.jackson.module.kotlin)
+    implementation(hlaeja.kotlin.reflect)
+    implementation(hlaeja.kotlinx.coroutines)
+    implementation(hlaeja.projectreactor.kotlin.reactor.extensions)
+    implementation(hlaeja.springboot.starter.actuator)
+    implementation(hlaeja.springboot.starter.webflux)
+
+    testImplementation(hlaeja.kotlin.test.junit5)
+    testImplementation(hlaeja.kotlinx.coroutines.test)
+    testImplementation(hlaeja.projectreactor.reactor.test)
+    testImplementation(hlaeja.springboot.starter.test)
+
+    testRuntimeOnly(hlaeja.junit.platform.launcher)
 }
 
 group = "ltd.hlaeja"
@@ -11,14 +27,6 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
     }
-}
-
-dependencies {
-    implementation("org.springframework.boot:spring-boot-starter")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 kotlin {
