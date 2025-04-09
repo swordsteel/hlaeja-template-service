@@ -1,6 +1,7 @@
 plugins {
     alias(hlaeja.plugins.kotlin.jvm)
     alias(hlaeja.plugins.kotlin.spring)
+    alias(hlaeja.plugins.ltd.hlaeja.plugin.service)
     alias(hlaeja.plugins.spring.dependency.management)
     alias(hlaeja.plugins.springframework.boot)
 }
@@ -22,19 +23,3 @@ dependencies {
 }
 
 group = "ltd.hlaeja"
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
-}
-
-kotlin {
-    compilerOptions {
-        freeCompilerArgs.addAll("-Xjsr305=strict")
-    }
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform()
-}
