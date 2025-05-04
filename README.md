@@ -10,10 +10,6 @@
 
 *Required: &check; can be stored as text, and &cross; need to be stored as secret.*
 
-## Releasing Service
-
-Run `release.sh` script from `master` branch.
-
 ## Development Configuration
 
 ### Global gradle properties
