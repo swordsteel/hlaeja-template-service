@@ -1,21 +1,28 @@
 spring:
   application:
-    name: hlaeja-service
+    name: "%APP_NAME%"
+    version: "%APP_VERSION%"
+    build:
+      time: "%APP_BUILD_TIME%"
+      os:
+        name: "%APP_BUILD_OS_NAME%"
+        version: "%APP_BUILD_OS_VERSION%"
   profiles:
     active: development
 
 management:
   endpoints:
-    enabled-by-default: false
+    access:
+      default: none
     web:
       exposure:
         include: "health,info"
   endpoint:
     health:
-      enabled: true
       show-details: always
+      access: read_only
     info:
-      enabled: true
+      access: read_only
 
 ---
 ###############################

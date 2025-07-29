@@ -2,7 +2,7 @@
 
 {description}
 
-## Properties for deployment
+## Properties For Deployment
 
 | Name                   | Required | Information             |
 |------------------------|:--------:|-------------------------|
@@ -12,7 +12,7 @@
 
 ## Releasing Service
 
-Run `release.sh` script from `master` branch.
+Run release pipeline from `master` branch.
 
 ## Development Configuration
 
