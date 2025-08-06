@@ -44,9 +44,9 @@ spring:
 
 ---
 ##############################
-### Production environment ###
+### Kubernetes environment ###
 ##############################
 spring:
   config:
     activate:
-      on-profile: production
+      on-profile: kubernetes
